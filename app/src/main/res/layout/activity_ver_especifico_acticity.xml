@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerEspecificoActicity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bannerImgVerEspecifico"
+                    android:layout_width="413dp"
+                    android:layout_height="153dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <ImageView
+                    android:id="@+id/coverImgVerEspecifico"
+                    android:layout_width="138dp"
+                    android:layout_height="194dp"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/bannerImgVerEspecifico"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/descripcionTxtVerEspecifico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:autoText="false"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/coverImgVerEspecifico"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/nombreTxtVerEspecifico"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Anime"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.27"
+                    app:layout_constraintStart_toEndOf="@+id/coverImgVerEspecifico"
+                    app:layout_constraintTop_toBottomOf="@+id/bannerImgVerEspecifico"
+                    app:layout_constraintVertical_bias="0.028" />
+
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/menuVerEspecifico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="#FFFFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionTxtVerEspecifico"
+                    app:menu="@menu/menu_ver_especifico" />
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutVer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menuVerEspecifico" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnLikeVerEspecifico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:backgroundTint="#00BCD4"
+                    app:layout_constraintBottom_toBottomOf="@+id/coverImgVerEspecifico"
+                    app:layout_constraintStart_toEndOf="@+id/btnAddVerEspecifico"
+                    app:layout_constraintTop_toBottomOf="@+id/nombreTxtVerEspecifico"
+                    app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAddVerEspecifico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:tint="#000000"
+                    app:backgroundTint="#00BCD4"
+                    app:layout_constraintBottom_toBottomOf="@+id/coverImgVerEspecifico"
+                    app:layout_constraintStart_toStartOf="@+id/nombreTxtVerEspecifico"
+                    app:layout_constraintTop_toBottomOf="@+id/nombreTxtVerEspecifico"
+                    app:srcCompat="@drawable/ic_add" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

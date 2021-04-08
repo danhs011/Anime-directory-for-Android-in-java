@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgUserUser"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="100dp"
+                    app:srcCompat="@drawable/logo_ganime" />
+
+                <TextView
+                    android:id="@+id/txtUsernameUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgUserUser"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:text="Nombre"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:id="@+id/imgLogOutUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    app:srcCompat="@drawable/ic_power_settings_new_black_24dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ultimos añadidos a la lista"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"
+                android:padding="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2User"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/relativeLayout1User"
+                android:background="@drawable/borde_negro"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

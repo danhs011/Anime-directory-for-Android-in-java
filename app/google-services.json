@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "791480004368",
+    "firebase_url": "https://ganimefi.firebaseio.com",
+    "project_id": "ganimefi",
+    "storage_bucket": "ganimefi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791480004368:android:3ecb06742bd71b44387f95",
+        "android_client_info": {
+          "package_name": "com.example.tfgv20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791480004368-rjquuap6hhfpt225pol71qhnaboa4ime.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfEMzfmfmtok0N63H4a-_9P3sZe1aHZKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791480004368-rjquuap6hhfpt225pol71qhnaboa4ime.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791480004368-4di4at3n9clj9f9o0b2n3mklpr4t7dcv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.carlungo.GanimeFinal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

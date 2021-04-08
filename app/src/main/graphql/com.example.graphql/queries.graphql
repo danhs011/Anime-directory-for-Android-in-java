@@ -1,0 +1,206 @@
+query Porgenero($page: Int!, $perPage: Int!, $genre: String!, $type: MediaType!, , $date: FuzzyDateInt!, $isAdult: Boolean) {
+  Page(page: $page, perPage: $perPage) {
+      pageInfo {
+            lastPage
+          }
+    media(genre: $genre , type: $type, startDate_greater: $date,  isAdult: $isAdult) {
+      id
+      coverImage {
+        extraLarge
+      }
+    }
+  }
+}
+
+
+
+query Aleatorio($page: Int, $perPage: Int,  $type: MediaType, $isAdult: Boolean) {
+  Page(page: $page, perPage: $perPage) {
+  pageInfo {
+        total
+        lastPage
+      }
+    media(type: $type,  isAdult: $isAdult) {
+      id
+      bannerImage
+    }
+  }
+}
+
+query getEspecifico($id: Int!) {
+  Page{
+    media(id: $id){
+      id
+      title {
+        romaji
+      }
+      description
+      coverImage {
+        extraLarge
+      }
+      bannerImage
+    }
+  }
+}
+
+query ScoreList ($page: Int, $perPage:Int, $averageg:Int )  {
+Page (page: $page, perPage: $perPage) {
+  pageInfo {
+    total
+    perPage
+    currentPage
+    lastPage
+    hasNextPage
+  }
+  media (averageScore_greater: $averageg){
+    id
+    title {
+      romaji
+    }
+    coverImage {
+      extraLarge
+    }
+    averageScore
+  }
+ }
+}
+
+query GetSeasonAnime($page: Int!, $perPage: Int!, $type: MediaType!, $seasonYear: Int!, $season: MediaSeason!, $isAdult: Boolean) {
+  Page(page: $page, perPage: $perPage) {
+      pageInfo {
+            lastPage
+          }
+    media(type: $type, seasonYear: $seasonYear, season: $season, isAdult: $isAdult) {
+      id
+      coverImage {
+        extraLarge
+      }
+      bannerImage
+      startDate {
+        year
+        month
+        day
+      }
+    }
+  }
+}
+
+
+query Characters ($id: Int) {
+Page {
+  media (id: $id) {
+  	id
+    characters {
+      edges {
+        node{
+          name{
+            full
+          }
+          image{
+            large
+          }
+        }
+      	role
+      }
+
+    }
+  }
+  }
+}
+
+
+
+query Staff ($id: Int) {
+Page {
+  media (id: $id) {
+  	id
+    staff {
+      edges {
+        node{
+          name{
+            full
+          }
+          image{
+            large
+          }
+        }
+      	role
+      }
+
+    }
+  }
+  }
+}
+
+query Relations ($id: Int) {
+  Page {
+    media (id: $id) {
+      id
+      relations {
+        edges{
+          relationType
+        }
+        nodes{
+          title {
+            romaji
+          }
+          coverImage{
+            extraLarge
+          }
+        }
+      }
+    }
+  }
+}
+
+query Search ($search:String) {
+  Page {
+    media(search:$search){
+    id
+    status
+      title{
+        english
+        native
+        romaji
+      }
+    type
+    description
+      coverImage {
+        extraLarge
+        large
+        medium
+        color
+      }
+    bannerImage
+   }
+  }
+}
+
+query Genre ($genre:String) {
+  Page {
+    media(genre:$genre){
+    id
+    status
+      title{
+        english
+        native
+        romaji
+      }
+    type
+    description
+      coverImage {
+        extraLarge
+        large
+        medium
+        color
+      }
+    bannerImage
+   }
+  }
+}
+
+
+
+
+
+

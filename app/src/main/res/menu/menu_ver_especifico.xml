@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/relationMenuVer"
+        android:title="Relations" />
+    <item
+        android:id="@+id/characterMenuVer"
+        android:title="Character" />
+    <item
+        android:id="@+id/staffMenuVer"
+        android:title="Staff" />
+</menu>
